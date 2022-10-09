@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="basicSpellChecker" class="org.abhishek.emailappusingspringxml.BasicSpellChecker"></bean>
+    
+    <bean id="emailClient" class="org.abhishek.emailappusingspringxml.EmailClient">
+    	<property name="spellChecker" ref="basicSpellChecker"></property>
+    </bean>
+
+</beans>
